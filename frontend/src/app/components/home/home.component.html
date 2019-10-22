@@ -1,0 +1,15 @@
+
+<div class="row">
+    <div class="col-4" *ngFor="let p of productos">
+
+      <div class="card" style="width: 18rem;">
+          <img src="http://contenidos.enter.co/custom/uploads/2018/10/ccsakura-1024x768.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{p.nombre_producto}}</h5>
+            <p class="card-text">{{p.descripcion_producto}}</p>
+            <a class="btn btn-primary" (click) = "navigate(p.id_producto)">ver mas</a>
+        
+          </div>
+      </div>
+    </div>
+  </div>
