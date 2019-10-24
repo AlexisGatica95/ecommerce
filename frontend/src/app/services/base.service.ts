@@ -18,11 +18,22 @@ export class BaseService {
   }
 
   async get() {
-    //este metodo devuelve una respuesta que envia l sevidos en formato Json
+    //este metodo devuelve una respuesta que envia al sevidor en formato Json
     try {
       return this.http.get(this.url_server + this.endpoint).toPromise();
     } catch (error) {
-      
+      throw error;
     }
   }
+
+  async post(obj) {
+    try {
+      return this.http.post(this.url_server + this.endpoint + "/" + environment.id_cliente, obj).toPromise();
+
+      
+    } catch (error) {
+      throw error
+    }
+  }
+  
 }

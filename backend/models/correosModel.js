@@ -7,7 +7,7 @@ async function getAdminEmail(id) {
         const rows = await pool.query(query,[id]);
         return rows;
     } catch(error) {
-        throw error;
+        throw error; 
     }
 }
 
